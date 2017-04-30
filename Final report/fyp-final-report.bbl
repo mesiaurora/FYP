@@ -1,0 +1,75 @@
+\begin{thebibliography}{10}
+
+\bibitem{giraph}
+Apache.
+\newblock Giraph.
+\newblock \url{http://giraph.apache.org/}, 2016.
+
+\bibitem{GraphX}
+Apache.
+\newblock Graphx programming guide.
+\newblock
+  \url{http://spark.apache.org/docs/latest/graphx-programming-guide.html},
+  2016.
+
+\bibitem{Chang}
+Fay Chang, Jeffrey Dean, Sanjay Ghemawat, Wilson~C Hsieh, Deborah~A Wallach,
+  Mike Burrows, Tushar Chandra, Andrew Fikes, and Robert~E Gruber.
+\newblock {Bigtable : A Distributed Storage System for Structured Data}.
+\newblock 2006.
+
+\bibitem{Dean}
+Jeffrey Dean and Sanjay Ghemawat.
+\newblock {MapReduce : Simplified Data Processing on Large Clusters}.
+\newblock {\em MapReduce}, 2004.
+
+\bibitem{fbcase}
+Facebook.
+\newblock A comparison of state-of-the-art graph processing systems.
+\newblock
+  \url{https://code.facebook.com/posts/319004238457019/a-comparison-of-state-of-the-art-graph-processing-systems/}.
+
+\bibitem{Ghemawat2003}
+Sanjay Ghemawat, Howard Gobioff, and Shun-tak Leung.
+\newblock {The Google File System}.
+\newblock {\em GFS}, 2003.
+
+\bibitem{ibm}
+IBM.
+\newblock {\em IBM Big Data Hub}, 2016 (accessed November 18, 2016).
+
+\bibitem{snap}
+Jure Leskovec.
+\newblock {\em Stanford Snap}, 2016 (accessed November 18, 2016).
+
+\bibitem{Malewicz2010}
+Grzegorz Malewicz, Matthew~H. Austern, Aart~J.C Bik, James~C. Dehnert, Ilan
+  Horn, Naty Leiser, and Grzegorz Czajkowski.
+\newblock {Pregel: a system for large-scale graph processing}.
+\newblock {\em Proceedings of the 2010 international conference on Management
+  of data - SIGMOD '10}, pages 135--146, 2010.
+
+\bibitem{sixdegrees}
+Zohreh~Azimifar Reza~Bakhshandeh, Mehdi~Samadi.
+\newblock Degrees of separation in social networks.
+\newblock {\em Six Degrees}, 2011.
+
+\bibitem{Tee2016b}
+Phil Tee, George Parisis, and Ian Wakeman.
+\newblock {Towards an Approximate Graph Entropy Measure for Identifying
+  Incidents in Network Event Data}.
+\newblock {\em AnNet paper}, 1(AnNet):1049--1054, 2016.
+
+\bibitem{Verma}
+Abhishek Verma, Luis Pedrosa, and Madhukar Korupolu.
+\newblock {Large-scale cluster management at Google with Borg}.
+\newblock 2015.
+
+\bibitem{Zaharia2012}
+Matei Zaharia, Mosharaf Chowdhury, Tathagata Das, and Ankur Dave.
+\newblock {Resilient distributed datasets: A fault-tolerant abstraction for
+  in-memory cluster computing}.
+\newblock {\em NSDI'12 Proceedings of the 9th USENIX conference on Networked
+  Systems Design and Implementation}, 2012.
+
+\end{thebibliography}
