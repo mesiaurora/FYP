@@ -11,6 +11,7 @@ class PregelMessage extends Serializable {
   var initialMessage : Boolean = true
   var id : VertexId = 1
   var hops : Int = 2
+  var msgNum : Int = 0
   var listOfVisited : scala.collection.mutable.Map[VertexId, (Int, Boolean)] = scala.collection.mutable.Map.empty[VertexId, (Int, Boolean)]
 //  var lastVisited : VertexId = id
 //  var lastVisitedAttr : (Int, Boolean) = (0, false)

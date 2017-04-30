@@ -130,9 +130,10 @@ object GraphProcessing {
     //    var msg = new PregelMessage
 
     initialMsg.initialMessage = true
+    initialMsg.msgNum = 0
 
     val returngraph: Graph[(Int, Boolean), Int] = graph.pregel[PregelMessage](initialMsg,
-      hops + 1,
+      hops + 2,
       EdgeDirection.Both)(
       vprog,
       sendMsg,
@@ -168,8 +169,13 @@ object GraphProcessing {
   //  msg.id = sourceV
   //  msg.lastVisited == sourceV
 
-
-  //Vertex program function for receiving messages, used by Pregel
+  /**
+    * Vertex program function for receiving messages, used by Pregel
+    * @param vertexId
+    * @param attr
+    * @param msg
+    * @return
+    */
   def vprog(vertexId: VertexId, attr: (Int, Boolean), msg: PregelMessage): (Int, Boolean) = {
 
     // Check if message is initial message and vertexId is the source vertex. If so, return true
@@ -180,46 +186,51 @@ object GraphProcessing {
       return (0, true)
       // if it's not, check if the message is the sourceV and return true. If it isn't but is connected to sourceV or
       // other vertex already marked true, then return true
-    } else if (msg.initialMessage != true && (msg.id == vertexId && msg.id != sourceV)) {
-      listOfVisited += (vertexId -> (msg.hops +1, true))
+    } else if (msg.id == vertexId && msg.id != sourceV) {
+      listOfVisited += (vertexId -> (msg.hops, true))
       msg.initialMessage = false
       println("****VPROG VERTEXID OUTSIDE INITIAL MESSAGE IS**** " + vertexId + attr)
-      return (msg.hops + 1, true)
+      return (msg.hops, true)
     } else {
       return attr
     }
   }
 
-  // Send message function that determines messages for next iteration and which vertices receive it
+  /**
+    * Send message function that determines messages for next iteration and which vertices receive it
+    * @param triplet
+    * @return
+    */
   def sendMsg(triplet: EdgeTriplet[(Int, Boolean), Int]): Iterator[(VertexId, PregelMessage)] = {
     println("PRINTING LIST OF VISITED")
     listOfVisited.foreach(println(_))
     var msg: PregelMessage = new PregelMessage
     msg.initialMessage = false
-    msg.hops = triplet.srcAttr._1
+//    msg.hops = triplet.srcAttr._1
+
 
 //    var vertexNeighbors: RDD[VertexId] = graph.triplets.collect {
 //      case t if t.srcId == triplet.srcId => t.dstId
 //    }
 
-
-//    if (triplet.srcId == sourceV) {
-//      Iterator((triplet.dstId, msg))
-//    } else
-    if (listOfVisited.contains(triplet.srcId) && triplet.srcAttr._1 <= 2) {
-      msg.id = triplet.srcId
+    if (listOfVisited.contains(triplet.srcId) && triplet.srcAttr._2) {
+      listOfVisited += (triplet.srcId -> triplet.srcAttr)
+      msg.id = triplet.dstId
       msg.hops = triplet.srcAttr._1 + 1
       Iterator((triplet.dstId, msg))
-//
-//    } else if (triplet.dstAttr._2 && triplet.dstAttr._1 <= 2) {
-//      Iterator((triplet.srcId, msg))
     } else {
       Iterator.empty
     }
   }
 
+  /**
+    *
+    * @param msg1
+    * @param msg2
+    * @return
+    */
   def mergeMsg(msg1: PregelMessage, msg2: PregelMessage): PregelMessage = {
-    return
+    return msg1
   }
 
 
@@ -238,7 +249,13 @@ object GraphProcessing {
   }
 
 
-  def dijkstraShortestPath() : Graph()
+  /**
+    *
+    * @return
+    */
+  def dijkstraShortestPath() : Graph[Int, Boolean] ={
+    return null
+  }
 
   /**
     *
