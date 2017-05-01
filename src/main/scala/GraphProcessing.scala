@@ -1,6 +1,6 @@
 import java.util.concurrent.atomic.LongAccumulator
 
-
+import GraphProcessing.hops
 import org.apache.spark.SparkContext
 import org.apache.spark._
 import org.apache.spark.graphx._
@@ -84,8 +84,8 @@ object GraphProcessing {
     val graphFromFile: Graph[Int, Int] = GraphLoader.edgeListFile(sc, path).partitionBy(PartitionStrategy.CanonicalRandomVertexCut)
     edges = graphFromFile.edges
     // CHANGE THIS TO INT.MINVALUE
-//    var reverseEdges: EdgeRDD[Int] = edges.reverse
-//        edges = edges.union(reverseEdges)
+    var reverseEdges: EdgeRDD[Int] = edges.reverse
+//        edges = edges.innerJoin(reverseEdges)
     vertices = VertexRDD.fromEdges(edges, 4, (0, false))
     graph = Graph.apply(vertices, edges, (0, false))
     graph.cache()
@@ -124,22 +124,17 @@ object GraphProcessing {
     * @param sourceV starting vertex for j-sphere
     * @return A new graph j-sphere
     */
-  def naiveJSphere(graph: Graph[(Int, Boolean), Int], sourceV: VertexId): Graph[(Int, Boolean), Int] = {
-    // Greate a graph using Pregel
-    println("CALLING PREGEL")
-    //    var msg = new PregelMessage
+  def naiveJSphere(graph: Graph[(Int, Boolean), Int], sourceV: VertexId): Graph[(Int, Boolean), Int] = {println("CALLING PREGEL")
 
     initialMsg.initialMessage = true
-    initialMsg.msgNum = 0
 
     val returngraph: Graph[(Int, Boolean), Int] = graph.pregel[PregelMessage](initialMsg,
-      hops + 2,
-      EdgeDirection.Both)(
-      vprog,
-      sendMsg,
-      mergeMsg)
+      hops,
+      EdgeDirection.Either)(
+      naivevprog,
+      naivesendMsg,
+      naivemergeMsg)
 
-    returngraph.vertices.collect().foreach(println(_))
     // Create JSphere subgraph for start vertex by only adding vertices and edges that are part of JSphere
     val jSphere: Graph[(Int, Boolean), Int] = returngraph.subgraph(epred = e => e.dstAttr._2 == true && e.srcAttr._2 == true,
       vpred = (id, VD) => VD._2 == true)
@@ -155,41 +150,17 @@ object GraphProcessing {
     return jSphere
   }
 
-  println("**CALLING NAIVE JSPHERE METHOD**")
-  // Create messages used by Pregel
-
-
-  //  var vAttr = msg.listOfVisited.get(sourceV).get
-  //    var sourceNeighbors : Array[(VertexId, (Int, Boolean))] =
-  //  var sourceNeighbors: Seq[Array[(VertexId)]] = GraphProcessing.neighbors.lookup(sourceV)
-  //  var sourceneighborArray: Array[(VertexId)] = sourceNeighbors.head
-
-  // Set message fields
-  //  msg.initialMessage == true
-  //  msg.id = sourceV
-  //  msg.lastVisited == sourceV
-
   /**
     * Vertex program function for receiving messages, used by Pregel
-    * @param vertexId
-    * @param attr
-    * @param msg
-    * @return
+    * @param vertexId current vertex id
+    * @param attr current vertex attribute
+    * @param msg received message
+    * @return new attribute to vertex
     */
-  def vprog(vertexId: VertexId, attr: (Int, Boolean), msg: PregelMessage): (Int, Boolean) = {
-
-    // Check if message is initial message and vertexId is the source vertex. If so, return true
+  def naivevprog(vertexId: VertexId, attr: (Int, Boolean), msg: PregelMessage): (Int, Boolean) = {
     if (msg.initialMessage == true && vertexId == sourceV) {
-      msg.initialMessage = false
-      println("****VPROG VERTEXID INSIDE INITIAL MESSAGE IS**** " + vertexId + attr)
-      listOfVisited += (vertexId -> (0, true))
       return (0, true)
-      // if it's not, check if the message is the sourceV and return true. If it isn't but is connected to sourceV or
-      // other vertex already marked true, then return true
     } else if (msg.id == vertexId && msg.id != sourceV) {
-      listOfVisited += (vertexId -> (msg.hops, true))
-      msg.initialMessage = false
-      println("****VPROG VERTEXID OUTSIDE INITIAL MESSAGE IS**** " + vertexId + attr)
       return (msg.hops, true)
     } else {
       return attr
@@ -198,44 +169,133 @@ object GraphProcessing {
 
   /**
     * Send message function that determines messages for next iteration and which vertices receive it
-    * @param triplet
-    * @return
+    * @param triplet a triplet through which messages are sent
+    * @return Iterator that sends the message through right
     */
-  def sendMsg(triplet: EdgeTriplet[(Int, Boolean), Int]): Iterator[(VertexId, PregelMessage)] = {
-    println("PRINTING LIST OF VISITED")
-    listOfVisited.foreach(println(_))
+  def naivesendMsg(triplet: EdgeTriplet[(Int, Boolean), Int]): Iterator[(VertexId, PregelMessage)] = {
     var msg: PregelMessage = new PregelMessage
     msg.initialMessage = false
-//    msg.hops = triplet.srcAttr._1
 
-
-//    var vertexNeighbors: RDD[VertexId] = graph.triplets.collect {
-//      case t if t.srcId == triplet.srcId => t.dstId
-//    }
-
-    if (listOfVisited.contains(triplet.srcId) && triplet.srcAttr._2) {
-      listOfVisited += (triplet.srcId -> triplet.srcAttr)
+    if (triplet.srcAttr._2 && !triplet.dstAttr._2) {
       msg.id = triplet.dstId
       msg.hops = triplet.srcAttr._1 + 1
-      Iterator((triplet.dstId, msg))
-    } else {
+      return Iterator((triplet.dstId, msg))
+    } else if (triplet.dstAttr._2 && !triplet.srcAttr._2)  {
+      msg.id = triplet.srcId
+      msg.hops = triplet.dstAttr._1 + 1
+      return Iterator((triplet.srcId, msg))
+    }
+      else {
       Iterator.empty
     }
   }
 
   /**
-    *
-    * @param msg1
-    * @param msg2
-    * @return
+    * Merge message for naive j-sphere, takes two messages and returns one
+    * @param msg1 first received message
+    * @param msg2 second received message
+    * @return message with bigger hop cunt
     */
-  def mergeMsg(msg1: PregelMessage, msg2: PregelMessage): PregelMessage = {
-    return msg1
+  def naivemergeMsg(msg1: PregelMessage, msg2: PregelMessage): PregelMessage = {
+    if (msg1.hops >= msg2.hops) {
+      println("Returning message 2")
+      return msg2
+    } else {
+      println("Returning message 1")
+      return msg1
+    }
   }
 
+  /**
+    *
+    */
+  def jSphere(hops: Int, graph: Graph[(Int, Boolean), Int]): Unit = {
+
+    initialMsg.initialMessage = true
+
+    var jspherecollection : Set[(VertexRDD[(Int, Boolean)], EdgeRDD[Int])] = null
 
 
-  // DecimalType data type? Double? Look into this more
+    val returngraph: Graph[(Int, Boolean), Int] = graph.pregel[PregelMessage](initialMsg,
+      hops,
+      EdgeDirection.Either)(
+      vprog,
+      sendMsg,
+      mergeMsg)
+
+    // Create JSphere subgraph for start vertex by only adding vertices and edges that are part of JSphere
+    val jSphere: Graph[(Int, Boolean), Int] = returngraph.subgraph(epred = e => e.dstAttr._2 == true && e.srcAttr._2 == true,
+      vpred = (id, VD) => VD._2 == true)
+    jSphere.cache()
+    println("JSPHERE CREATED")
+    println("JSPHERE num edges = " + jSphere.numEdges)
+    println("JSPHERE num vertices = " + jSphere.numVertices)
+
+    // Print all vertices in JSphere
+    jSphere.vertices.collect().foreach(println(_))
+    jSphere.cache()
+
+    return jSphere
+
+  }
+
+  /**
+    * Vertex program function for receiving messages, used by Pregel
+    * @param vertexId current vertex id
+    * @param attr current vertex attribute
+    * @param msg received message
+    * @return new attribute to vertex
+    */
+  def vprog(vertexId: VertexId, attr: (Int, Boolean), msg: PregelMessage): (Int, Boolean) = {
+    if (msg.initialMessage == true && vertexId == sourceV) {
+      return (0, true)
+    } else if (msg.id == vertexId && msg.id != sourceV) {
+      return (msg.hops, true)
+    } else {
+      return attr
+    }
+  }
+
+  /**
+    * Send message function that determines messages for next iteration and which vertices receive it
+    * @param triplet a triplet through which messages are sent
+    * @return Iterator that sends the message through right
+    */
+  def sendMsg(triplet: EdgeTriplet[(Int, Boolean), Int]): Iterator[(VertexId, PregelMessage)] = {
+    var msg: PregelMessage = new PregelMessage
+    msg.initialMessage = false
+
+    if (triplet.srcAttr._2 && !triplet.dstAttr._2) {
+      msg.id = triplet.dstId
+      msg.hops = triplet.srcAttr._1 + 1
+      return Iterator((triplet.dstId, msg))
+    } else if (triplet.dstAttr._2 && !triplet.srcAttr._2)  {
+      msg.id = triplet.srcId
+      msg.hops = triplet.dstAttr._1 + 1
+      return Iterator((triplet.srcId, msg))
+    }
+    else {
+      Iterator.empty
+    }
+  }
+
+  /**
+    * Merge message for naive j-sphere, takes two messages and returns one
+    * @param msg1 first received message
+    * @param msg2 second received message
+    * @return message with bigger hop cunt
+    */
+  def mergeMsg(msg1: PregelMessage, msg2: PregelMessage): PregelMessage = {
+    if (msg1.hops >= msg2.hops) {
+      println("Returning message 2")
+      return msg2
+    } else {
+      println("Returning message 1")
+      return msg1
+    }
+  }
+
+  // DecimalType data type? Double? BigDecimal? Look into this more
   /**
     * Clustering coefficient for an input graph
     * @param inGraph
@@ -249,6 +309,15 @@ object GraphProcessing {
   }
 
 
+//
+//  def InverseDegree(inGraph: Graph[(Int, Boolean), Int], inVertexId : VertexId) : Long = {
+//    var degreeOfVertex : Long = neighbors.lookup(inVertexId).length.toLong
+//    var pivi : Long = 1 / degreeOfVertex
+//
+//    return null
+//  }
+
+
   /**
     *
     * @return
@@ -259,16 +328,16 @@ object GraphProcessing {
 
   /**
     *
+    * @param inGraph
+    * @return
     */
-  def jSphere(hops: Int, graph: Graph[(Int, Boolean), Int]): Unit = {
+  def normalisedDegreeEntropyForANode(inGraph : Graph[(Int, Boolean), Int], id : VertexId) : BigDecimal = {
+    var CC : Long = clusteringCoefficient(inGraph, id)
 
-    //    // Create messages used by Pregel
-    //    msg = new PregelMessage
-    //    msg2 = new PregelMessage
-    //
-    //    // Set parameters for initial message
-    //    msg.initialMessage = true
-    //    msg.setHops(hops)
 
+    return null
   }
+
+
+
 }
