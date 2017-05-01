@@ -27,7 +27,8 @@ Jeffrey Dean and Sanjay Ghemawat.
 Facebook.
 \newblock A comparison of state-of-the-art graph processing systems.
 \newblock
-  \url{https://code.facebook.com/posts/319004238457019/a-comparison-of-state-of-the-art-graph-processing-systems/}.
+  \url{https://code.facebook.com/posts/319004238457019/a-comparison-of-state-of-the-art-graph-processing-systems/},
+  2016.
 
 \bibitem{Ghemawat2003}
 Sanjay Ghemawat, Howard Gobioff, and Shun-tak Leung.
@@ -37,6 +38,10 @@ Sanjay Ghemawat, Howard Gobioff, and Shun-tak Leung.
 \bibitem{ibm}
 IBM.
 \newblock {\em IBM Big Data Hub}, 2016 (accessed November 18, 2016).
+
+\bibitem{hadooprealworld}
+Hadoop in~Real~World.
+\newblock {\em Hadoop in Real World}, 2016 (accessed November 18, 2016).
 
 \bibitem{snap}
 Jure Leskovec.
@@ -49,16 +54,33 @@ Grzegorz Malewicz, Matthew~H. Austern, Aart~J.C Bik, James~C. Dehnert, Ilan
 \newblock {\em Proceedings of the 2010 international conference on Management
   of data - SIGMOD '10}, pages 135--146, 2010.
 
+\bibitem{graphxbook}
+Rinda Ramamonjison.
+\newblock {\em Apache Spark Graph Processing}, volume~1.
+\newblock Packt Publishing, 2 edition, 2015.
+
 \bibitem{sixdegrees}
 Zohreh~Azimifar Reza~Bakhshandeh, Mehdi~Samadi.
 \newblock Degrees of separation in social networks.
 \newblock {\em Six Degrees}, 2011.
+
+\bibitem{cakesolutions}
+Cake Solutions.
+\newblock Graphx pregel example.
+\newblock
+  \url{http://www.cakesolutions.net/teamblogs/graphx-pregel-api-an-example},
+  2016.
 
 \bibitem{Tee2016b}
 Phil Tee, George Parisis, and Ian Wakeman.
 \newblock {Towards an Approximate Graph Entropy Measure for Identifying
   Incidents in Network Event Data}.
 \newblock {\em AnNet paper}, 1(AnNet):1049--1054, 2016.
+
+\bibitem{Valiant}
+Leslie~G. Valiant.
+\newblock A bridging model for parallel computation.
+\newblock {\em Commun. ACM}, 33(8):103--111, August 1990.
 
 \bibitem{Verma}
 Abhishek Verma, Luis Pedrosa, and Madhukar Korupolu.
