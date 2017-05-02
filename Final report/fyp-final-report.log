@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  1 MAY 2017 15:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  2 MAY 2017 12:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -566,7 +566,7 @@ Package pdftex.def Info: pictures/sussex.jpg used on input line 22.
 [1
 
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./pictu
-res/sussex.jpg>] (./fyp-final-report.toc
+res/sussex.jpg>] [1] (./fyp-final-report.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -576,27 +576,17 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \openout3 = `fyp-final-report.toc'.
 
  [1]
-Underfull \hbox (badness 10000) in paragraph at lines 46--47
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 48--49
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 50--51
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 53--54
 
  []
 
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 56--57
+
+Underfull \hbox (badness 10000) in paragraph at lines 55--56
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--58
 
  []
 
@@ -605,181 +595,132 @@ Underfull \hbox (badness 10000) in paragraph at lines 60--61
 
  []
 
-
+[2]
 Underfull \hbox (badness 10000) in paragraph at lines 62--63
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--65
+Underfull \hbox (badness 10000) in paragraph at lines 65--66
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--68
+Underfull \hbox (badness 10000) in paragraph at lines 68--69
 
  []
 
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 73--74
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--71
 
  []
 
-<pictures/SystemIllustration.jpg, id=21, 903.375pt x 702.625pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--73
+
+ []
+
+[3] <pictures/SystemIllustration.jpg, id=24, 903.375pt x 702.625pt>
 File: pictures/SystemIllustration.jpg Graphic file (type jpg)
 
 <use pictures/SystemIllustration.jpg>
-Package pdftex.def Info: pictures/SystemIllustration.jpg used on input line 77.
+Package pdftex.def Info: pictures/SystemIllustration.jpg used on input line 81.
 
 (pdftex.def)             Requested size: 361.3436pt x 281.04501pt.
 
-Overfull \hbox (16.3436pt too wide) in paragraph at lines 77--78
+Overfull \hbox (16.3436pt too wide) in paragraph at lines 81--82
  [][] 
  []
 
 
-LaTeX Warning: Citation `bmhadoop' on page 4 undefined on input line 78.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 81--82
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
 
  []
 
 [4 <./pictures/SystemIllustration.jpg>]
-<pictures/mapreducefigure.png, id=25, 1038.88126pt x 669.50125pt>
+Underfull \hbox (badness 10000) in paragraph at lines 87--88
+
+ []
+
+<pictures/mapreducefigure.png, id=28, 1038.88126pt x 669.50125pt>
 File: pictures/mapreducefigure.png Graphic file (type png)
 
 <use pictures/mapreducefigure.png>
-Package pdftex.def Info: pictures/mapreducefigure.png used on input line 85.
+Package pdftex.def Info: pictures/mapreducefigure.png used on input line 91.
 (pdftex.def)             Requested size: 415.54514pt x 267.79576pt.
 
-Overfull \hbox (70.54514pt too wide) in paragraph at lines 85--86
+Overfull \hbox (70.54514pt too wide) in paragraph at lines 91--92
  [][] 
  []
 
 
-Overfull \hbox (5.97052pt too wide) in paragraph at lines 89--91
-[]\OT1/cmr/m/n/10 The MapRe-duce se-quence of ac-tions, shown in fig-ure 2 (NOT
-E HERE CHECK
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 89--91
+Underfull \hbox (badness 10000) in paragraph at lines 95--98
 
  []
 
 [5 <./pictures/mapreducefigure.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 92--95
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 96--98
+Underfull \hbox (badness 10000) in paragraph at lines 99--102
 
  []
 
 [6]
-Overfull \hbox (9.20897pt too wide) in paragraph at lines 99--106
+Overfull \hbox (9.20897pt too wide) in paragraph at lines 103--110
 []\OT1/cmr/m/n/10 In [[]] the au-thors in-tro-duce Google's Borg sys-tem, sim-i
 -lar to Apache Hadoop's
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 99--106
+Underfull \hbox (badness 10000) in paragraph at lines 103--110
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 108--109
+Underfull \hbox (badness 10000) in paragraph at lines 111--113
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 110--111
+Underfull \hbox (badness 10000) in paragraph at lines 117--118
 
  []
-
-<pictures/RDD.png, id=38, 514.92375pt x 187.70125pt>
-File: pictures/RDD.png Graphic file (type png)
- <use pictures/RDD.png>
-Package pdftex.def Info: pictures/RDD.png used on input line 114.
-(pdftex.def)             Requested size: 257.46124pt x 93.85039pt.
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 118--119
+Underfull \hbox (badness 10000) in paragraph at lines 119--120
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 120--121
+LaTeX Warning: Citation `sparkguide' on page 9 undefined on input line 121.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 121--122
 
  []
 
+<pictures/RDD.png, id=44, 514.92375pt x 187.70125pt>
+File: pictures/RDD.png Graphic file (type png)
+ <use pictures/RDD.png>
+Package pdftex.def Info: pictures/RDD.png used on input line 125.
+(pdftex.def)             Requested size: 257.46124pt x 93.85039pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 123--124
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 125--126
+Underfull \hbox (badness 10000) in paragraph at lines 129--130
 
  []
 
 [9 <./pictures/RDD.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 127--128
+Underfull \hbox (badness 10000) in paragraph at lines 131--132
 
  []
 
 
-Overfull \hbox (0.23679pt too wide) in paragraph at lines 130--131
-\OT1/cmr/m/n/10 ac-cord-ing to study by Face-book [[]], Gi-raph per-forms bet-t
-er and is more memory-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 130--131
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 132--133
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 134--135
+Underfull \hbox (badness 10000) in paragraph at lines 133--134
 
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 136--137
-
- []
-
-<pictures//triplet.png, id=49, 501.875pt x 67.25125pt>
-File: pictures//triplet.png Graphic file (type png)
-
-<use pictures//triplet.png>
-Package pdftex.def Info: pictures//triplet.png used on input line 140.
-(pdftex.def)             Requested size: 351.31009pt x 47.07553pt.
-
-Overfull \hbox (6.31009pt too wide) in paragraph at lines 140--141
- [][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 144--145
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 146--147
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 148--149
-
+Overfull \hbox (0.23679pt too wide) in paragraph at lines 151--152
+\OT1/cmr/m/n/10 ac-cord-ing to study by Face-book [[]], Gi-raph per-forms bet-t
+er and is more memory-
  []
 
 
@@ -787,157 +728,214 @@ Underfull \hbox (badness 10000) in paragraph at lines 151--152
 
  []
 
-[11 <./pictures//triplet.png>]
+[11]
 Underfull \hbox (badness 10000) in paragraph at lines 153--154
 
  []
 
-<pictures/nodeimportance.png, id=54, 534.99875pt x 328.22626pt>
-File: pictures/nodeimportance.png Graphic file (type png)
 
-<use pictures/nodeimportance.png>
-Package pdftex.def Info: pictures/nodeimportance.png used on input line 157.
-(pdftex.def)             Requested size: 321.00172pt x 196.93727pt.
-
-
-LaTeX Warning: Citation `ibmhadoop' on page 12 undefined on input line 165.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 164--166
+Underfull \hbox (badness 10000) in paragraph at lines 155--156
 
  []
 
-[12 <./pictures/nodeimportance.png>]
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--158
+
+ []
+
+<pictures//triplet.png, id=56, 501.875pt x 67.25125pt>
+File: pictures//triplet.png Graphic file (type png)
+
+<use pictures//triplet.png>
+Package pdftex.def Info: pictures//triplet.png used on input line 161.
+(pdftex.def)             Requested size: 351.31009pt x 47.07553pt.
+
+Overfull \hbox (6.31009pt too wide) in paragraph at lines 161--162
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 165--166
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 167--168
 
  []
 
-
-Overfull \hbox (19.94511pt too wide) in paragraph at lines 169--170
-[]\OT1/cmr/m/n/10 The test data was down-loaded from Stan-ford Snap [[]], which
- con-tains anonymised
- []
-
-
+[12 <./pictures//triplet.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 169--170
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 177.
+
+Underfull \hbox (badness 10000) in paragraph at lines 172--173
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 174--175
+
+ []
+
+[13] <pictures/nodeimportance.png, id=67, 534.99875pt x 328.22626pt>
+File: pictures/nodeimportance.png Graphic file (type png)
+
+<use pictures/nodeimportance.png>
+Package pdftex.def Info: pictures/nodeimportance.png used on input line 203.
+(pdftex.def)             Requested size: 321.00172pt x 196.93727pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 210--212
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 213--214
+
+ []
+
+[14 <./pictures/nodeimportance.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 215--216
+
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 223.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 177.
-
-Underfull \hbox (badness 10000) in paragraph at lines 184--185
-
- []
-
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 228--229
-
- []
-
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 223.
 
 Underfull \hbox (badness 10000) in paragraph at lines 230--231
 
  []
 
-[14] <pictures//pregel/1.png, id=69, 651.43375pt x 124.465pt>
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 262--263
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 264--265
+
+ []
+
+[16] <pictures//pregel/1.png, id=78, 651.43375pt x 124.465pt>
 File: pictures//pregel/1.png Graphic file (type png)
 
 <use pictures//pregel/1.png>
-Package pdftex.def Info: pictures//pregel/1.png used on input line 236.
+Package pdftex.def Info: pictures//pregel/1.png used on input line 270.
 (pdftex.def)             Requested size: 390.86325pt x 74.67957pt.
 
-Overfull \hbox (45.86325pt too wide) in paragraph at lines 236--237
+Overfull \hbox (45.86325pt too wide) in paragraph at lines 270--271
  [][] 
  []
 
-<pictures//pregel/2.png, id=70, 654.445pt x 139.52126pt>
+<pictures//pregel/2.png, id=79, 654.445pt x 139.52126pt>
 File: pictures//pregel/2.png Graphic file (type png)
 
 <use pictures//pregel/2.png>
-Package pdftex.def Info: pictures//pregel/2.png used on input line 242.
+Package pdftex.def Info: pictures//pregel/2.png used on input line 276.
 (pdftex.def)             Requested size: 392.67003pt x 83.7134pt.
 
-Overfull \hbox (47.67003pt too wide) in paragraph at lines 242--243
+Overfull \hbox (47.67003pt too wide) in paragraph at lines 276--277
  [][] 
  []
 
-[15 <./pictures//pregel/1.png>]
-<pictures//pregel/3.png, id=75, 685.56125pt x 128.48pt>
+<pictures//pregel/3.png, id=80, 685.56125pt x 128.48pt>
 File: pictures//pregel/3.png Graphic file (type png)
 
 <use pictures//pregel/3.png>
-Package pdftex.def Info: pictures//pregel/3.png used on input line 248.
+Package pdftex.def Info: pictures//pregel/3.png used on input line 282.
 (pdftex.def)             Requested size: 411.33992pt x 77.08858pt.
 
-Overfull \hbox (66.33992pt too wide) in paragraph at lines 248--249
+Overfull \hbox (66.33992pt too wide) in paragraph at lines 282--283
  [][] 
  []
 
-<pictures//pregel/4.png, id=76, 685.56125pt x 138.5175pt>
+[17 <./pictures//pregel/1.png> <./pictures//pregel/2.png>]
+<pictures//pregel/4.png, id=87, 685.56125pt x 138.5175pt>
 File: pictures//pregel/4.png Graphic file (type png)
 
 <use pictures//pregel/4.png>
-Package pdftex.def Info: pictures//pregel/4.png used on input line 254.
+Package pdftex.def Info: pictures//pregel/4.png used on input line 288.
 (pdftex.def)             Requested size: 411.33992pt x 83.11113pt.
 
-Overfull \hbox (66.33992pt too wide) in paragraph at lines 254--255
+Overfull \hbox (66.33992pt too wide) in paragraph at lines 288--289
  [][] 
  []
 
-<pictures//pregel/5.png, id=77, 643.40375pt x 146.5475pt>
+<pictures//pregel/5.png, id=88, 643.40375pt x 146.5475pt>
 File: pictures//pregel/5.png Graphic file (type png)
 
 <use pictures//pregel/5.png>
-Package pdftex.def Info: pictures//pregel/5.png used on input line 260.
+Package pdftex.def Info: pictures//pregel/5.png used on input line 294.
 (pdftex.def)             Requested size: 386.04523pt x 87.92915pt.
 
-Overfull \hbox (41.04523pt too wide) in paragraph at lines 260--261
+Overfull \hbox (41.04523pt too wide) in paragraph at lines 294--295
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 267--269
+Underfull \hbox (badness 10000) in paragraph at lines 302--304
 
  []
 
-[16 <./pictures//pregel/2.png> <./pictures//pregel/3.png> <./pictures//pregel/4
-.png> <./pictures//pregel/5.png>] [17] (./fyp-final-report.bbl
-Underfull \hbox (badness 1748) in paragraph at lines 27--32
+
+Underfull \hbox (badness 10000) in paragraph at lines 316--317
+
+ []
+
+[18 <./pictures//pregel/3.png> <./pictures//pregel/4.png> <./pictures//pregel/5
+.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 318--319
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 320--321
+
+ []
+
+[19] (./fyp-final-report.bbl
+Underfull \hbox (badness 1748) in paragraph at lines 26--31
 []\OT1/cmr/m/n/10 Facebook.  A com-par-i-son of state-of-the-art graph pro-cess
 -ing sys-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--32
+Underfull \hbox (badness 10000) in paragraph at lines 26--31
 \OT1/cmr/m/n/10 tems.  $\OT1/cmtt/m/n/10 https : / / code . facebook . com / po
 sts / 319004238457019 /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--32
+Underfull \hbox (badness 10000) in paragraph at lines 26--31
 \OT1/cmtt/m/n/10 a-[]comparison-[]of-[]state-[]of-[]the-[]art-[]graph-[]process
 ing-[]systems/$\OT1/cmr/m/n/10 ,
  []
 
-[18]) [19] (./fyp-final-report.aux)
+
+Underfull \hbox (badness 3838) in paragraph at lines 38--41
+[]\OT1/cmr/m/n/10 ibm.  What is hadoop.  $\OT1/cmtt/m/n/10 http : / / www . ibm
+bigdatahub . com / blog /
+ []
+
+[20]) [21] (./fyp-final-report.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
  3843 strings out of 493014
- 53273 string characters out of 6133351
- 131877 words of memory out of 5000000
+ 53275 string characters out of 6133351
+ 130882 words of memory out of 5000000
  7291 multiletter control sequences out of 15000+600000
  7227 words of font info for 26 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,7n,39p,1414b,270s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,7n,39p,1407b,270s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb>
@@ -948,10 +946,10 @@ sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
 local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/l
 ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/lo
 cal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on fyp-final-report.pdf (20 pages, 685746 bytes).
+Output written on fyp-final-report.pdf (23 pages, 693276 bytes).
 PDF statistics:
- 130 PDF objects out of 1000 (max. 8388607)
- 77 compressed objects within 1 object stream
+ 139 PDF objects out of 1000 (max. 8388607)
+ 83 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

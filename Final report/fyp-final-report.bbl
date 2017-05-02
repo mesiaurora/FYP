@@ -8,8 +8,7 @@ Apache.
 \bibitem{GraphX}
 Apache.
 \newblock Graphx programming guide.
-\newblock
-  \url{http://spark.apache.org/docs/latest/graphx-programming-guide.html},
+\newblock \url{http://spark.apache.org/docs/latest/programming-guide.html},
   2016.
 
 \bibitem{Chang}
@@ -34,6 +33,11 @@ Facebook.
 Sanjay Ghemawat, Howard Gobioff, and Shun-tak Leung.
 \newblock {The Google File System}.
 \newblock {\em GFS}, 2003.
+
+\bibitem{ibmhadoop}
+ibm.
+\newblock What is hadoop.
+\newblock \url{http://www.ibmbigdatahub.com/blog/what-hadoop}, 2016.
 
 \bibitem{ibm}
 IBM.

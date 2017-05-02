@@ -36,6 +36,13 @@
 	\vfill
 \end{titlepage}
 
+\begin{titlepage}
+	\bigskip
+	\centering
+	\vspace{5cm}
+{\par\large\bfseries Acknowledgements}
+A big thank you to the supervisor of this project, George Parisis, for his patience, help and supervision. This project is motivated by a research by Phil Tee, Ian Wakeman and George Parisis \cite{Tee2016b}. Thank you to Felix Bowman for teaching and helping with Scala programming language. Thank you to Hayden Tucker for all the support. \\ 
+\end{titlepage}
 
 \tableofcontents
 
@@ -45,16 +52,17 @@
 \subsection{Big Data}
 Current era of technology has changed the way we handle data. Unlike centuries before, technology has enabled the world to store data in virtual format rather than archiving decades worth of paper records. In current years, the amount of virtual data has been constantly growing and at the moment, according to IBM Big Data and Analytics Hub \cite{ibm}, "2.3 trillion gigabytes of data is created each day". The term for this important topic in Computer Science is Big Data; how to store, handle, process and calculate these amounts of data. Big Data includes user created data; videos and pictures uploaded to several social media sites and streaming sites, blogs and microblogs, but also data from companies like virtual backups and medical records. \\
 
-IBM Big Data And Analytics Hub describes four dimensions of Big Data, four V's: volume, variety, velocity and veracity. Volume refers to the amount of data being created and stored. Variety is the dimensions of data created; data created by individual people but also by companies. Velocity refers to the analysis of streaming data and the speed of analysis. Veracity is the uncertainty and unreliability of data, for example Wikipedia as a source material when everyone can edit articles. \\
+IBM Big Data And Analytics Hub describes four dimensions of Big Data, four V's: volume, variety, velocity and veracity. Volume refers to the amount of data being created and stored. Variety is the dimensions of data created; data created by individual people and companies. Velocity refers to the analysis of streaming data and the speed of analysis. Veracity is the uncertainty and unreliability of data, for example Wikipedia as a source material when everyone can edit articles. \\
 
-Big Data is an important topic, not only in the practical way how to store and process Big Data, but also how to harness it to research purposes. Big Data has enabled completely new fields and ways of research, for example sentiment analysis of new products and celebrities, social media research on social interaction and friendships like Degrees of Separation in Social Networks research by Bakhshandeh et al \cite{sixdegrees}, and research on networks. However, to use this amount of data, there is a real need for frameworks and systems that can handle the quantity of data without being extremely time consuming. For this project, several batch processing and distributed data processing frameworks and systems were explored and tested. \\
+Big Data is an important topic, not only in the practical way if how to store and process Big Data, but also how to harness it to research purposes. Big Data has enabled completely new fields and ways of research, for example sentiment analysis of new products and celebrities, social media research on social interaction and friendships like Degrees of Separation in Social Networks research by Bakhshandeh et al \cite{sixdegrees}, and research on networks. However, to use this amount of data, there is a real need for frameworks and systems that can handle the quantity of data without being extremely time consuming. For this project, several batch processing and distributed data processing frameworks and systems were researched, tested and used in the final implementation. \\
 
 \subsection{Network processing}
-Different type of networks, like social media networks, transport route networks and internet networks, are a big part of Big Data. Many practical and theoretical problems in Computer Science are related to networks. They are a highly researched topic and in research, networks are often mapped to graphs. These graphs are getting incredibly big; social media websites have millions of users and connections between them. Processing this data is time consuming and requires significant amount of computational power. Networks can be partitioned into smaller chunks, but sometimes the whole network has to be used. The goal for this project was to build a system using several Big Data tools to be able to do computations and run algorithms on graphs efficiently. This project is motivated by research from Tee, Parisis and Wakeman \cite{Tee2016b}. Their research about importance of a node in a graph uses node properties, concentrating on node entropy, to define most important nodes in a graph. In their research there is a need for a system that can run computations on large graphs. Their paper is further introduced in the background reading section of this report. \\
+Different type of networks, like social media networks, transport route networks and internet networks, are a big part of Big Data. Many practical and theoretical problems in Computer Science are related to networks. They are a highly researched topic and in research, networks are often mapped to graphs. These graphs are getting incredibly big; social media websites have millions of users which correspond to nodes in a graph and connections between them that are represented as edges in the graph. Companies can have several offices around the globe and have data centres and internal networks. Processing this data is time consuming and requires significant amount of computational power. Networks can be partitioned into smaller chunks, but sometimes the whole network has to be used or even the partitions can be large. Graphs can also be dynamically changing and updating, and research on such graphs require continuous updating of the state and components, where previous calculations might not be applicable anymore. \\
+
+The goal for this project was to build a system using several Big Data tools to be able to do computations and run algorithms on graphs efficiently. This project is motivated by research from Tee, Parisis and Wakeman \cite{Tee2016b}. Their research about importance of a node in a graph uses node properties, concentrating on node entropy, to define most important nodes in a graph. In their research there is a need for a system that can run computations on large graphs without being horribly time consuming. Their paper is further introduced in the background reading section of this report. \\
 
 \subsection{This Report}
-The rest of this report is as follows; professional considerations; acknowledgements, background reading and other sources; JUHUU HERE \\
-
+The rest of this report is as follows; section 2 includes professional considerations, section 3 introduces the background reading and other sources of information about this project; section 4 gives more detailed information about the project itself and the implementation and future work that could be done, and section 7 includes the conclusion. \\
 
 \section{Professional Considerations}
 This project adheres to BCS Code of Conduct. This project was within my professional competence being a project related to several topics studied during my degree of Computer Science. \\
@@ -63,20 +71,18 @@ This project didn't include any kind of personal or private data, and did not in
 
 The programming interfaces and frameworks used in this project are Open Source and freely available for everyone. Any borrowed code will be referenced accordingly and all will be done considering copyrights and ownership of code. Papers, sources, websites and other information used are referenced. \\
 
-\section{Acknowledgements}
-A big thank you to the supervisor of this project, George Parisis, for his patience, help and supervision. This project is motivated by a research by Phil Tee, Ian Wakeman and George Parisis \cite{Tee2016b}. Thank you to Felix Bowman for teaching and helping with Scala programming language. Thank you to Hayden Tucker for all the support. \\ 
-
 \section{Background reading and motivation}
-A large part of this project consisted on getting to know several distributed and Big Data processing tools and systems. This was done reading and understanding several papers; Google's paper about Google File System (GFS) \cite{Ghemawat2003}, Google's cluster data processing tool MapReduce \cite{Dean}, Google's storage system Bigtable for managing structured data \cite{Chang}, Google's cluster management system Borg \cite{Verma}, Google's graph processing tool Pregel \cite{Malewicz2010}, Apache's cluster computation system Spark \cite{Zaharia2012} and paper by Tee, Parisis and Wakeman \cite{Tee2016b} about their research on node importance and vertex measures. Background knowledge on the systems used was crucial so they could be used to their full potential and to limit the number of errors in the code. 
+A large part of this project consisted on getting to know several distributed and Big Data processing tools and systems. This was done reading and understanding several papers; Google's papers about Google File System (GFS) \cite{Ghemawat2003}, Google's cluster data processing tool MapReduce \cite{Dean}, Google's storage system Bigtable for managing structured data \cite{Chang}, Google's cluster management system Borg \cite{Verma}, Google's graph processing tool Pregel \cite{Malewicz2010}, Apache's cluster computation system Spark \cite{Zaharia2012} and paper by Tee, Parisis and Wakeman \cite{Tee2016b} about their research on node importance and vertex measures. Background knowledge on the systems used was crucial so they could be chosen appropriately, used to their full potential and to limit the number of errors in the code. 
 
 \subsection{Apache Hadoop and related papers}
-Apache Hadoop is a framework for distributed storage and processing of large datasets. Hadoop consists of a Hadoop Distributed File System (HDFS) which stores the data; MapReduce processing model which splits input data into smaller chunks and shares the chunks to be processed by nodes; Hadoop YARN resource manager which manages computing resources; and Hadoop Common which contains libraries and utilities needed by Apache Hadoop. HDFS and MapReduce are inspired by papers from Google about their Google File System (GFS) \cite{Ghemawat2003} and MapReduce \cite{Dean}. The building blocks of Apache Hadoop will be introduced top down in this report; first MapReduce, then Yarn, HBase and finally HDFS. \\ 
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.4]{SystemIllustration}
-\caption{Hadoop System Illustration, from \cite{bmhadoop}}
+\caption{Hadoop System Illustration, from \cite{ibmhadoop}}
 \end{figure}
+
+Apache Hadoop is a framework for distributed storage and processing of large datasets. Hadoop consists of a Hadoop Distributed File System (HDFS) which stores the data; MapReduce processing model which splits input data into smaller chunks and shares the chunks to be processed by nodes; Hadoop YARN resource manager which manages computing resources; and Hadoop Common which contains libraries and utilities needed by Apache Hadoop. Apache Hadoop system is illustrated in figure 1. HDFS and MapReduce are inspired by papers from Google about their Google File System (GFS) \cite{Ghemawat2003} and MapReduce \cite{Dean}, and Hadoop YARN was inspired by Google's Borg resource manager \cite{Verma}. The building blocks of Apache Hadoop will be introduced top down in this report; first MapReduce, then Yarn, HBase and finally HDFS. \\ 
 
 The paper \cite{Dean} by J. Dean and S. Ghemawat introduces Google's MapReduce. MapReduce processes data on large cluster and operates on sequences of actions. It takes an input formatted as a key, value -pairs, Map method maps these values to intermediate values, and Reduce method merges the intermediate values of a key to one value. Map and Reduce methods are user-defined and can be written to process different types of inputs. The idea behind MapReduce was to create a new abstraction that allows simple computations while hiding details like parallelisation, fault-tolerance and data distribution. \\
 
@@ -86,7 +92,7 @@ The paper \cite{Dean} by J. Dean and S. Ghemawat introduces Google's MapReduce. 
 \caption{Map Reduce sequence of actions. }
 \end{figure}
 
-The MapReduce sequence of actions, shown in figure 2 (NOTE HERE CHECK IF RIGHT FIGURE NUMBER), starts by splitting the input file into M pieces and starts up copies on cluster machines. There are M Map tasks and R Reduce tasks. One of the copies is a master copy, which assigns Map and Reduce jobs to other clusters called worker clusters. Worker then reads its own input split, parses it into key, value -pairs and passes each to map method. The buffered pairs are then written into a local disk, which is partitioned into R regions. Locations of these pairs are passed back to the master cluster and master then assigns reduce operations to clusters by passing the location of the buffered data, which is sorted by keys. Workers iterate over keys and passes the values to Reduce operation. MapReduce sequence of actions returns exactly R outputs. 
+The MapReduce sequence of actions, shown in figure 2, starts by splitting the input file into M pieces and starts up copies on cluster machines. There are M Map tasks and R Reduce tasks. One of the copies is a master copy, which assigns Map and Reduce jobs to other clusters called worker clusters. Worker then reads its own input split, parses it into key, value -pairs and passes each to map method. The buffered pairs are then written into a local disk, which is partitioned into R regions. Locations of these pairs are passed back to the master cluster and master then assigns reduce operations to clusters by passing the location of the buffered data, which is sorted by keys. Workers iterate over keys and passes the values to Reduce operation. MapReduce sequence of actions returns exactly R outputs. 
 MapReduce handles fault-tolerance by allowing master cluster to ping each of the worker cluster, and if the worker doesn't respond in a certain amount of time, the worker is marked as failed by the master and the task is assigned to another worker node. If a map task is completed or failed, they are marked as idle and become eligible for rescheduling. Because map task results are stored on local disks, even completed map tasks will be recomputed in a case of a failure. All workers working on reduce tasks will be notified of this re-execution and any worker working on a reduce task will read the data from the new worker. Master nodes write checkpoints to protect from master node failure. If a master node fails, a new copy will simply be started from the last checkpoint.
 MapReduce can express many real world tasks, and examples they give in the paper is counting the number of occurrences of a word in a document, counting URL access frequency, distributed sort and others. They show that MapReduce can be used for several tasks while being computationally effective. MapReduce has further inspired other processing systems, like Apache GraphX Pregel's Send Message and Merge Message functions, which will be introduced later in this report. \\ 
 
@@ -112,9 +118,7 @@ Apache Spark \cite{Zaharia2012} is a cluster computing system, which runs on top
 
 Spark was built to efficiently handle iterative algorithms and interactive data mining tools. Most computing frameworks handle these applications really inefficiently, for example MapReduce allows large-scale data analytics, but is made inefficient because of the lack of abstractions for leveraging distributed memory. MapReduce and other frameworks create data, but don't allow easy reuse for the intermediate data, and this is important if the intermediate results are used by several parallel computations. To reuse the data, it has to be written to an external storage system, and this is waste of time and space due to data replication. Spark allows reusing the intermediate data, and optimises data placement while being fault tolerant. \\ 
 
-Resilient Distributed Dataset RDD is a collection of elements, which can be of almost any type, and it is created by partitioning a dataset of these elements. Users can control the persistence and partitioning of RDD's. Users can choose which RDD's will be persisted in memory and choose the storage strategy for them. Partitioning and re-partitioning can be done based on a key or RDD's allow large scale, parallel computations on large clusters to be done in-memory. RDD's allow storing intermediate results while controlling data partitioning for optimised data placement. RDD's have comprehensive set of operators for manipulating stored data.  \\
-
-Spark has two types of operations; transformations and actions like shown in figure 2. Transformations on RDD's return a new RDD and actions compute results. RDD's are not saved, but they can be persisted. This means that using transformations and actions on RDD's change the stored data, and the original or intermediate datasets might not be stored unless cache method is explicitly called on the RDD.\\
+Resilient Distributed Dataset RDD is a collection of elements, where the elements can be of almost any type, and it is created by partitioning a dataset of these elements. Users can control the persistence and partitioning of the created RDD's. Users can choose which RDD's will be persisted in memory and choose the storage strategy for them, but the memory strategies have trade-offs. \cite{sparkguide} The default storage strategy is to store the RDD's in memory, but other memory option is 'memory only serialised', which makes the objects space efficient, but slower to access than just memory. There are options to store computations on the disks, but this should only be done in case the datasets are large after expensive computations, because in less demanding computations it might be faster to redo the computation rather than store in the disk and then access the disk. There are also replicated storage level options of each previously mentioned, and these are good for fast fault recovery. Partitioning and re-partitioning can be done based on a key or RDD's allow large scale, parallel computations on large clusters to be done in-memory. RDD's allow storing intermediate results while controlling data partitioning for optimised data placement. \\
 
 \begin{figure}[H]
 \centering
@@ -122,11 +126,13 @@ Spark has two types of operations; transformations and actions like shown in fig
 \caption{Sparks operations: transformations and actions}
 \end{figure}
 
+RDD's have comprehensive set of operators for manipulating stored data. Spark has two types of operations; transformations and actions, shown in figure 2. Transformations on RDD's return a new RDD and actions compute results. RDD's are not saved, but they can be persisted by user explicitly calling persist method on the RDD. This means that using transformations and actions on RDD's change the stored data, and the original or intermediate datasets might not be stored unless persist method is called on the RDD. This is convenient, since in many cases the intermediate results do not need to be saved and it gives user more control over memory and disk space. \\
+
 Spark has a number of operators, including Map, flatMap and Reduce. Map in Spark is a transformation and returns a new RDD, and Reduce is a action. Map is one-to-one mapping, while flatMap is similar to Map function in MapReduce. Some other relevant operators Spark has, and that are introduced in the paper, are partitionBy (transformation), which takes a partitioner and returns a new RDD which is partitioned differently, join and union (transformations), which take two RDD's and either unify them or join them. Some of these, like join are only available on RDD's of key-value pairs. \\
 
-One important component in distributed processing is parallelisation. Because things run in parallel, variables and counters cannot be implemented without variables that are shared between all the clusters. Spark offers two types of shared variables; broadcast variables and accumulators. Broadcast variables are read-only variables, which are cached on each machine or cluster in serialised form, and can be used to share large quantities of data efficiently across partitions. Accumulators are variables that can be used to implement counters and sums.  \\ 
+One important component in distributed processing is parallelisation. Because things run in parallel, variables and counters cannot be implemented without variables that are shared between all the clusters. RDD's can express a range of different parallel applications and many specialised programming models that are done using iterative computation. Spark offers two types of shared variables; broadcast variables and accumulators. Broadcast variables are read-only variables, which are cached on each machine or cluster in serialised form, and can be used to share large quantities of data efficiently across partitions. Accumulators are variables that can be used to implement counters and sums.  \\ 
 
-Even though core Spark can be used to implement graph processing algorithms, like page rank, Spark also has a graph processing component, which will be introduced later in this section of the report. 
+Even though core Spark can be used to implement graph processing algorithms, like Pagerank, Spark also has a graph processing component, which will be introduced later in this section. 
 
 \subsection{Pregel}
 Pregel, introduced in \cite{Malewicz2010}, is a computational model suitable for efficient large scale graph processing, designed by Google for Google cluster architecture. The high-level organization of Pregel programs was inspired by Valiant's Bulk Synchronous Parallel model \cite{Valiant} and operates similarly to MapReduce. Pregel takes an input of a directed graph where each vertex has unique vertex identifier and associated with modifiable user-defined value and directed edges are associated with target vertices and consists of a modifiable user-defined value and target vertex identifier.
@@ -167,6 +173,29 @@ The motivation for this project comes from research by Tee, Parisis and Wakeman 
 
 They have considered a class of measures based on three different entropy measures: Structural, Chromatic and Von Neumann entropies. However, these measures require NP-Hard calculations over a whole graph, which doesn't scale for modern graphs which are large. Due to the scalability issues, their research is concentrating on Graph Entropy measures, concentrating on graph entropy for a single node. Their research shows, that calculating node entropies for the whole graph approximately gives the same results as entropy for a whole graph.  \\
 
+In the implementation of this project, concentration was on finding a way to create a j-sphere. J-sphere is a neighbourhood in a graph centred around a vertex, and in the paper Tee et al define it as follows: 
+For a node $v_{i} \in V$, `j-sphere'
+  centered on $v_{i}$ as:
+\begin{equation}\label{eqn:jsphere}
+S^{j}_{i}= \{ v_{k} \in V | d(v_{i},v_{k}) \leq j, j \geq 1 \} \cup \{ v_{i} \}
+\end{equation}
+
+They also define the related 'j-edges' $E^{j}$ as:
+\begin{equation}
+  E^{j}_{i}=\{ e_{kl} \in E | v_{k} \in S^{j}_{i} \mbox{ and  } v_{l} \in S^{j}_{i} \}
+\end{equation}
+
+After implementing j-sphere with Pregel, goal was to implement several different algorithms to run on the j-sphere. 
+
+Clustering coefficient, which was implemented using simple arithmetic expressions in Scala, is defined as: 
+\begin{equation}
+C_{i} = \frac{|2E_{i}|}{d(d+1)}
+\end{equation}
+Clustering coefficient captures how well meshed in its neighbourhood a vertex is. Clustering coefficient is crucial function in Tee, Parisis and Wakeman research. It is used to calculate Normalized Inverse Degree Entropy, which is defined as:
+\begin{equation}
+NVE(v_{i}) = \frac{1}{C_{i}} \times VE(v_{i})
+\end{equation} 
+
 WRITE MORE HERE
 
 \begin{figure}[H]
@@ -203,20 +232,9 @@ When deciding requirements for this project, a program or system built in Java p
 Due to time constraints, proper evaluation for processing time wasn't done, so improving time of calculations was not something that was tested.  
 
 \subsection{Overview of the implementation}
-Substantial part of the implementation of this project was to use GraphX's Pregel function to create a j-sphere. J-sphere is a vertex's neighbourhood including all the vertices j hops away. Creating 1-sphere is simple and fast, it includes the vertices that source vertex is connected straight with an edge. In \cite{Tee2016b}, Tee, Parisis and Wakeman define j-sphere:
+Substantial part of the implementation of this project was to use GraphX's Pregel function to create a j-sphere. J-sphere is a vertex's neighbourhood including all the vertices j hops away, and it's defined in the background section 3.5 of this report, in equation 1. Creating 1-sphere is simple and fast, it includes the vertices that source vertex is connected straight with an edge, and 2-sphere is fairly simple, but creating an algorithm that captures more than that was more complicated. 
 
-For a node $v_{i} \in V$, `j-sphere'
-  centered on $v_{i}$ as:
-\begin{equation}\label{eqn:jsphere}
-S^{j}_{i}= \{ v_{k} \in V | d(v_{i},v_{k}) \leq j, j \geq 1 \} \cup \{ v_{i} \}
-\end{equation}
-
-They also define the related 'j-edges' $E^{j}$ as
-\begin{equation}
-  E^{j}_{i}=\{ e_{kl} \in E | v_{k} \in S^{j}_{i} \mbox{ and  } v_{l} \in S^{j}_{i} \}
-\end{equation}
-
-After implementing j-sphere with Pregel, goal was to implement several different algorithms to run on the j-sphere. 
+After implementing j-sphere with Pregel, goal was to implement several different algorithms to run on the j-sphere. These included clustering coefficient, which is also defined in section 3.5, in equation 3.
 
 Clustering coefficient, which was implemented using simple arithmetic expressions in Scala, is defined as: 
 \begin{equation}
@@ -277,7 +295,7 @@ The method naiveJSphere sends the initial message to all vertices in the graph w
 \caption{Naive j-sphere: Subgraph created of nodes 2 hop away}
 \end{figure}
 
-The second j-sphere method creates a j-sphere for all vertices and 
+The second j-sphere method creates a j-sphere for all vertices and stores them in a Set of VertexRDD's and EdgeRDD's. 
 
 \subsection{Implemented algorithms}
 
@@ -293,12 +311,17 @@ Clustering coefficient, defined in equation 3, was simple to implement, since Gr
 
 
 \subsection{Issues in implementation and solutions for them}
-The implementation of j-sphere had several issues. Because the graph was created from a file, the vertex attribute was set as an int, but j-sphere implementation required vertex attribute to store a state wether or not the vertex had been visited and how many hops away from the source node the vertex is. The solution to this was to create a second VertexRDD from the edges and associate a tuple for each vertex. This tuple was initialised as (0, false) for each node. This allowed easy use for the subgraph method, but it is not the most computationally effective way to create a graph. 
-Another issue with j-sphere was to keep count of the hops. Because the user-defined functions in Pregel are called in parallel for each (active) vertex, having a simple variable to keep track of the hops was virtually impossible. One solution for this would've been to use GraphX's method for collecting neighbour vertices or vertex ids, which returns a Scala Sequence collection of Arrays or ID's or vertices. However, trying this approach, the program got stuck and even though it ran and no errors came up, the lookup method to lookup vertices in the collection seemed to not work. This approach was thus abandoned. The hop count was implemented with passing the hops through messages instead of storing it in a variable. 
-GraphX operating on directed graphs also created its own issues. Even though GraphX's Pregel method takes EdgeDirection parameter, this only controls which direction the messages are received, not which direction the messages are sent. There were three ways to work around directed graphs, either create another EdgeRDD with all the edges reversed and add that to the graph on which Pregel will be called on, call the Pregel method twice, once for the original graph and then to a graph with same edges reversed, or having an if-statement to send messages to both sides depending on which direction the message comes from. First and second solutions are obviously computationally ineffective, especially for large graphs. The third solution was used to implement j-sphere.
 
 
+The implementation of j-sphere had several issues. Because the graph was created from a file, the vertex attribute was set as an int, but j-sphere implementation required vertex attribute to store a state wether or not the vertex had been visited and how many hops away from the source node the vertex is. The solution to this was to create a second VertexRDD from the edges and associate a tuple for each vertex. This tuple was initialised as (0, false) for each node. This allowed easy use for the subgraph method, but it is not the most computationally effective way to create a graph. \\
 
+Another issue with j-sphere was to keep count of the hops. Because the user-defined functions in Pregel are called in parallel for each (active) vertex, having a simple variable to keep track of the hops was virtually impossible. One solution for this would've been to use GraphX's method for collecting neighbour vertices or vertex ids, which returns a Scala Sequence collection of Arrays or ID's or vertices. However, trying this approach, the program got stuck and even though it ran and no errors came up, the lookup method to lookup vertices in the collection seemed to not work. This approach was thus abandoned. The hop count was implemented with passing the hops through messages instead of storing it in a variable. \\
+
+GraphX operating on directed graphs also created its own issues. Even though GraphX's Pregel method takes EdgeDirection parameter, this only controls which direction the messages are received, not which direction the messages are sent. There were three ways to work around directed graphs, either create another EdgeRDD with all the edges reversed and add that to the graph on which Pregel will be called on, call the Pregel method twice, once for the original graph and then to a graph with same edges reversed, or having an if-statement to send messages to both sides depending on which direction the message comes from. First and second solutions are obviously computationally ineffective, especially for large graphs. The third solution was used to implement j-sphere however this solution doesn't overcome the overall directed graph issue and only works for certain methods. \\
+
+
+\subsection{Future work}
+There is obvious need for proper evaluation for this project. 
 
 \section{Conclusion}
 -Is it fast? Does it work? What's happening
@@ -309,10 +332,14 @@ To utilise the systems used for this project requires detailed background resear
 
 Looking back, more research should have been done when choosing the systems, and if there is future for this type of project, Apache Giraph might be more suitable for this type of distributed processing. 
 
+
+
 \addcontentsline{toc}{section}{References}
 \bibliography{fyp-final-report.bib.bib}
 
 \section{Appendix}
+
+\subsection{Word count}
 
 \subsection{Meeting logs}
 

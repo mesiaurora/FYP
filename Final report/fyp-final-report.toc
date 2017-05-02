@@ -4,23 +4,24 @@
 \contentsline {subsection}{\numberline {1.2}Network processing}{2}
 \contentsline {subsection}{\numberline {1.3}This Report}{3}
 \contentsline {section}{\numberline {2}Professional Considerations}{3}
-\contentsline {section}{\numberline {3}Acknowledgements}{3}
-\contentsline {section}{\numberline {4}Background reading and motivation}{3}
-\contentsline {subsection}{\numberline {4.1}Apache Hadoop and related papers}{4}
-\contentsline {subsection}{\numberline {4.2}Apache Spark}{8}
-\contentsline {subsection}{\numberline {4.3}Pregel}{9}
-\contentsline {subsection}{\numberline {4.4}Apache GraphX}{10}
-\contentsline {subsection}{\numberline {4.5}Graph Entropy Measures}{12}
-\contentsline {subsection}{\numberline {4.6}Other sources of information}{12}
-\contentsline {section}{\numberline {5}Graph Processing}{13}
-\contentsline {subsection}{\numberline {5.1}Aims of the project}{13}
-\contentsline {subsection}{\numberline {5.2}Overview of the implementation}{14}
-\contentsline {subsection}{\numberline {5.3}Used systems}{14}
-\contentsline {subsection}{\numberline {5.4}Creating a JSphere}{15}
-\contentsline {subsection}{\numberline {5.5}Implemented algorithms}{16}
-\contentsline {subsection}{\numberline {5.6}Issues in implementation and solutions for them}{17}
-\contentsline {section}{\numberline {6}Conclusion}{17}
-\contentsline {section}{References}{18}
-\contentsline {section}{\numberline {7}Appendix}{19}
-\contentsline {subsection}{\numberline {7.1}Meeting logs}{19}
-\contentsline {subsection}{\numberline {7.2}Code snippets}{19}
+\contentsline {section}{\numberline {3}Background reading and motivation}{4}
+\contentsline {subsection}{\numberline {3.1}Apache Hadoop and related papers}{4}
+\contentsline {subsection}{\numberline {3.2}Apache Spark}{8}
+\contentsline {subsection}{\numberline {3.3}Pregel}{10}
+\contentsline {subsection}{\numberline {3.4}Apache GraphX}{12}
+\contentsline {subsection}{\numberline {3.5}Graph Entropy Measures}{13}
+\contentsline {subsection}{\numberline {3.6}Other sources of information}{14}
+\contentsline {section}{\numberline {4}Graph Processing}{15}
+\contentsline {subsection}{\numberline {4.1}Aims of the project}{15}
+\contentsline {subsection}{\numberline {4.2}Overview of the implementation}{16}
+\contentsline {subsection}{\numberline {4.3}Used systems}{16}
+\contentsline {subsection}{\numberline {4.4}Creating a JSphere}{16}
+\contentsline {subsection}{\numberline {4.5}Implemented algorithms}{18}
+\contentsline {subsection}{\numberline {4.6}Issues in implementation and solutions for them}{19}
+\contentsline {subsection}{\numberline {4.7}Future work}{19}
+\contentsline {section}{\numberline {5}Conclusion}{19}
+\contentsline {section}{References}{20}
+\contentsline {section}{\numberline {6}Appendix}{21}
+\contentsline {subsection}{\numberline {6.1}Word count}{21}
+\contentsline {subsection}{\numberline {6.2}Meeting logs}{21}
+\contentsline {subsection}{\numberline {6.3}Code snippets}{21}

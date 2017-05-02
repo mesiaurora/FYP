@@ -4,14 +4,14 @@
 \@writefile{toc}{\select@language{english}}
 \@writefile{lof}{\select@language{english}}
 \@writefile{lot}{\select@language{english}}
+\citation{Tee2016b}
 \citation{ibm}
 \citation{sixdegrees}
-\citation{Tee2016b}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{2}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Big Data}{2}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Network processing}{2}}
-\citation{snap}
 \citation{Tee2016b}
+\citation{snap}
 \citation{Ghemawat2003}
 \citation{Dean}
 \citation{Chang}
@@ -21,58 +21,59 @@
 \citation{Tee2016b}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.3}This Report}{3}}
 \@writefile{toc}{\contentsline {section}{\numberline {2}Professional Considerations}{3}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Acknowledgements}{3}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Background reading and motivation}{3}}
+\citation{ibmhadoop}
 \citation{Ghemawat2003}
 \citation{Dean}
-\citation{bmhadoop}
+\citation{Verma}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Background reading and motivation}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Apache Hadoop and related papers}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Hadoop System Illustration, from \cite  {ibmhadoop}}}{4}}
 \citation{Dean}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Apache Hadoop and related papers}{4}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Hadoop System Illustration, from \cite  {bmhadoop}}}{4}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Map Reduce sequence of actions. }}{5}}
 \citation{Chang}
-\citation{Ghemawat2003}
 \citation{Verma}
+\citation{Ghemawat2003}
 \citation{Zaharia2012}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Apache Spark}{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Apache Spark}{8}}
+\citation{sparkguide}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Sparks operations: transformations and actions}}{9}}
 \citation{Malewicz2010}
 \citation{Valiant}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Sparks operations: transformations and actions}}{9}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Pregel}{9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Pregel}{10}}
 \citation{giraph}
 \citation{GraphX}
 \citation{fbcase}
 \citation{Malewicz2010}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Apache GraphX}{10}}
 \citation{GraphX}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Apache GraphX}{12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Comparison of vertices, edges and triplets, from \cite  {GraphX} }}{12}}
 \citation{Tee2016b}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Comparison of vertices, edges and triplets, from \cite  {GraphX} }}{11}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Graph Entropy Measures}{13}}
+\newlabel{eqn:jsphere}{{1}{13}}
 \citation{Tee2016b}
 \citation{hadooprealworld}
 \citation{ibmhadoop}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Graph Entropy Measures}{12}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Critical nodes in a network, figure 9 from \cite  {Tee2016b}.}}{12}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Other sources of information}{12}}
 \citation{GraphX}
 \citation{graphxbook}
 \citation{cakesolutions}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Critical nodes in a network, figure 9 from \cite  {Tee2016b}.}}{14}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Other sources of information}{14}}
 \citation{snap}
-\citation{Tee2016b}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Graph Processing}{13}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Aims of the project}{13}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Graph Processing}{15}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Aims of the project}{15}}
 \citation{GraphX}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Overview of the implementation}{14}}
-\newlabel{eqn:jsphere}{{1}{14}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Used systems}{14}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Creating a JSphere}{15}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Naive j-sphere: Initial Graph}}{15}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Naive j-sphere: Initial Message sent to all nodes}}{16}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Naive j-sphere: Message sent to 1 hop away from initial nodes}}{16}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Naive j-sphere: Messages ignored by nodes already visited}}{16}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Naive j-sphere: Subgraph created of nodes 2 hop away}}{16}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Implemented algorithms}{16}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.6}Issues in implementation and solutions for them}{17}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusion}{17}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Overview of the implementation}{16}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Used systems}{16}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Creating a JSphere}{16}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Naive j-sphere: Initial Graph}}{17}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Naive j-sphere: Initial Message sent to all nodes}}{17}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Naive j-sphere: Message sent to 1 hop away from initial nodes}}{18}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Naive j-sphere: Messages ignored by nodes already visited}}{18}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Naive j-sphere: Subgraph created of nodes 2 hop away}}{18}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Implemented algorithms}{18}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Issues in implementation and solutions for them}{19}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.7}Future work}{19}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusion}{19}}
 \bibdata{fyp-final-report.bib.bib}
 \bibcite{giraph}{1}
 \bibcite{GraphX}{2}
@@ -80,18 +81,20 @@
 \bibcite{Dean}{4}
 \bibcite{fbcase}{5}
 \bibcite{Ghemawat2003}{6}
-\bibcite{ibm}{7}
-\bibcite{hadooprealworld}{8}
-\bibcite{snap}{9}
-\bibcite{Malewicz2010}{10}
-\bibcite{graphxbook}{11}
-\bibcite{sixdegrees}{12}
-\bibcite{cakesolutions}{13}
-\bibcite{Tee2016b}{14}
-\@writefile{toc}{\contentsline {section}{References}{18}}
-\bibcite{Valiant}{15}
-\bibcite{Verma}{16}
-\bibcite{Zaharia2012}{17}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Appendix}{19}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Meeting logs}{19}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Code snippets}{19}}
+\bibcite{ibmhadoop}{7}
+\bibcite{ibm}{8}
+\bibcite{hadooprealworld}{9}
+\bibcite{snap}{10}
+\bibcite{Malewicz2010}{11}
+\bibcite{graphxbook}{12}
+\bibcite{sixdegrees}{13}
+\bibcite{cakesolutions}{14}
+\@writefile{toc}{\contentsline {section}{References}{20}}
+\bibcite{Tee2016b}{15}
+\bibcite{Valiant}{16}
+\bibcite{Verma}{17}
+\bibcite{Zaharia2012}{18}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Appendix}{21}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Word count}{21}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Meeting logs}{21}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Code snippets}{21}}
