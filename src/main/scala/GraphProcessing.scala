@@ -10,7 +10,7 @@ import org.apache.spark.graphx.{GraphLoader, PartitionStrategy}
 /**
   * Created by kea on 16/03/2017.
   */
-object GraphProcessing {
+object  GraphProcessing {
 
   // Set up Spark Configuration and SparkContext to initialise a Spark Session
   val conf = new SparkConf()

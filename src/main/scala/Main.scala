@@ -33,16 +33,7 @@ object Main {
     println("num edges = " + graph.numEdges);
     println("num vertices = " + graph.numVertices);
 
-
-
-
-
-
     sc.stop()
 
   }
-
-
-
-
 }
